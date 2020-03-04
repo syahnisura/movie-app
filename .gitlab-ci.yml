@@ -10,7 +10,7 @@ deploy-to-development:
     - npm run build
   except:
     - develop
-    - master
+    - masterA
 deploy-production:
   type: deploy
   stage: production

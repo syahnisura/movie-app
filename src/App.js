@@ -2,6 +2,11 @@ import React from "react";
 import { connect } from "react-redux";
 import "./App.css";
 import { getMovies, addMovie, deleteMovie } from "./store/actions/movie";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import HeaderPage from "./components/HeaderPage";
+import SlideShow from "./components/SlideShow";
+import Section from "./components/Section";
+import FooterPage from "./components/FooterPage";
 
 const App = props => {
   const [title, setTitle] = React.useState("");
@@ -32,19 +37,16 @@ const App = props => {
   ));
 
   return (
-    <div className="App">
-      <h1>Redux with API</h1>
-      <form onSubmit={onSubmit}>
-        <input
-          style={{ width: "50%" }}
-          type="text"
-          placeholder="title"
-          onChange={change}
-        />
-        <button>add</button>
-        {lists}
-      </form>
-      <ol></ol>
+    <div>
+      <Router>
+        <Switch>
+          <Route path="/anime" component={Section} />
+        </Switch>
+      </Router>
+      <HeaderPage />
+      <SlideShow />
+      <Section />
+      {/* <FooterPage /> */}
     </div>
   );
 };
