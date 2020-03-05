@@ -1,13 +1,17 @@
+.container-navbar {
+  padding: 0px 20px;
+  background-color: black;
+  color: white;
+  // position: absolute;
+}
+
 .header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   height: 80px;
-  background-color: #c4c4c4;
-
-  input {
-    margin-left: 20vw;
-    width: 10%;
-  }
+  max-width: 1200px;
+  margin: 0px auto;
 
   button {
     // margin-left: 70em;
@@ -16,12 +20,16 @@
   }
 
   a {
-    margin-left: 800px;
+    margin-left: 550px;
   }
+}
 
-  h1 {
-    margin-left: 120px;
-  }
+.modal {
+  position: absolute;
+  background-color: white;
+  z-index: 30;
+  top: 250px;
+  left: 600px;
 }
 
 // .input-header {

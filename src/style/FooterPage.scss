@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  height: 30 0px;
+  p {
+    text-align: center;
+  }
+  hr {
+    width: 90vw;
+    margin: auto;
+  }
+}
+
+.wrapper-footer {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.google {
+  width: 100px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  margin: auto;
+
+  ul {
+    list-style: none;
+    li {
+      &:hover {
+        cursor: pointer;
+        color: red;
+      }
+    }
+  }
+}

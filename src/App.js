@@ -3,10 +3,14 @@ import { connect } from "react-redux";
 import "./App.css";
 import { getMovies, addMovie, deleteMovie } from "./store/actions/movie";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import HeaderPage from "./components/HeaderPage";
-import SlideShow from "./components/SlideShow";
-import Section from "./components/Section";
-import FooterPage from "./components/FooterPage";
+
+// Page Component
+import HomePage from "./page/HomePage";
+import SignInPage from "./page/SignInPage";
+import SignUpPage from "./page/SignUpPage";
+import DetailPageOverview from "./page/DetailPageOverview";
+import ReviewComponent from "./components/ReviewComponent";
+import CharacterComponent from "./components/CharacterComponent";
 
 const App = props => {
   const [title, setTitle] = React.useState("");
@@ -40,13 +44,14 @@ const App = props => {
     <div>
       <Router>
         <Switch>
-          <Route path="/anime" component={Section} />
+          <Route path="/" exact component={HomePage} />
+          <Route path="/signin" component={SignInPage} />
+          <Route path="/signup" component={SignUpPage} />
+          <Route path="/detailpage" component={DetailPageOverview} />
+          <Route path="/reviewpage" component={ReviewComponent} />
+          <Route path="/characterpage" component={CharacterComponent} />
         </Switch>
       </Router>
-      <HeaderPage />
-      <SlideShow />
-      <Section />
-      {/* <FooterPage /> */}
     </div>
   );
 };

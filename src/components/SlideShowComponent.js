@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../style/SlideShow.scss";
 
-class SlideShow extends Component {
+class SlideShowComponent extends Component {
   constructor(props) {
     super(props);
 
@@ -93,4 +93,4 @@ const RightArrow = props => {
   );
 };
 
-export default SlideShow;
+export default SlideShowComponent;
